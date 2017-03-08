@@ -237,7 +237,7 @@ public class HomeFragment extends Fragment implements AdapterView.OnItemClickLis
         if (symbolcount == 0)
           {
         String[] list = {"EURUSD", "EURJPY", "EURGBP", "USDJPY", "USDCHF", "USDCAD", "AUDJPY", "AUDUSD", "GBPJPY", "GBPUSD", "NZDJPY", "NZDUSD", "XAUUSD", "XAGUSD", "EUROPE"};
-
+              Log.i("", "getSymbolList: ");
         int count = list.length;
         for (Integer i = 0; i < count; i++) {
             symbollist.add(list[i]);
