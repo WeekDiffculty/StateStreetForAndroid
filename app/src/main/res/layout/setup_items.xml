@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:padding="5dp"
+    android:background="#FFFFFF">
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/setupicon"
+        android:background="@drawable/corners_bg"
+        android:src="@drawable/about"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:text="账户"
+        android:layout_marginLeft="5dp"
+        android:id="@+id/setupitemname"
+        android:gravity="center_vertical"
+        android:textSize="15dp"
+        />
+</LinearLayout>

@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Navigation</string>
+    <string name="drawer_layout_open">Open</string>
+    <string name="drawer_layout_close">Close</string>
+    <string name="blog_site">官方网站:https://www.china-statestreet.com</string>
+    <string name="nick_name">StateStreet</string>
+    <string name="tips">Hello</string>
+    <string name="navigation_navigation_bar">行情</string>
+    <string name="navigation_radio_bar">图表</string>
+    <string name="navigation_tab_layout">历史</string>
+    <string name="navigation_tab_layout2">TabLayout + ViewPager 2</string>
+    <string name="navigation_text_tab">交易</string>
+    <string name="navigation_tab_host">设置</string>
+
+    <string name="item_home">行情</string>
+    <string name="item_location">图表</string>
+    <string name="item_like">交易</string>
+    <string name="item_history">历史</string>
+    <string name="item_person">设置</string>
+</resources>
