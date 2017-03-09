@@ -30,7 +30,7 @@ import com.kevin.tech.bottomnavigationbarforandroid.utils.SnackBarUtils;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
     private DrawerLayout mDrawerLayout;
-    private Toolbar mToolbar;
+    public  Toolbar mToolbar;
     private NavigationView mNavigationView;
     private ActionBarDrawerToggle mDrawerToggle;
     private NavigationFragment mNavigationFragment;

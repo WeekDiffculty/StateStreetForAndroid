@@ -1,5 +1,6 @@
 package com.kevin.tech.bottomnavigationbarforandroid.fragment.subfragment;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -28,6 +29,8 @@ import android.widget.Toast;
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.kevin.tech.bottomnavigationbarforandroid.Constants;
 import com.kevin.tech.bottomnavigationbarforandroid.R;
+import com.kevin.tech.bottomnavigationbarforandroid.fragment.subfragment.setUp.About;
+import com.kevin.tech.bottomnavigationbarforandroid.fragment.subfragment.setUp.KefuActivity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -121,10 +124,17 @@ public class PersonFragment extends Fragment implements AdapterView.OnItemClickL
 
                 break;
             case 1:
+                //意图
+                Intent intent = new Intent(getContext(), KefuActivity.class);
+               // intent.setClassName(getPackageName(),".fragment.subfragment.setUp.KefuActivity");//显示意图，不指定动作，不指定数据，直接启动组件
+                startActivity(intent);
+                //intent.setAction();
+                //intent.setData(); //隐士意图，
 
                 break;
             case 2:
-
+                Intent intents = new Intent(getContext(), About.class);
+                startActivity(intents);
                 break;
             default:
                 break;
