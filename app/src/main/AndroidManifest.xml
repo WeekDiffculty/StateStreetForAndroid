@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <!-- 查看网络链接 -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -15,6 +16,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
             android:theme="@style/BaseTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,7 +25,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".fragment.subfragment.setUp.KefuActivity" />
-        <activity android:name=".fragment.subfragment.setUp.About"></activity>
+        <activity android:name=".fragment.subfragment.setUp.About" />
+        <activity android:name=".fragment.subfragment.Hq.Model.HqOption"
+            android:theme="@style/Base.Theme.AppCompat.Dialog"></activity>
     </application>
 
 </manifest>

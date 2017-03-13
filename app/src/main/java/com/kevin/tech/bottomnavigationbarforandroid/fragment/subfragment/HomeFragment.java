@@ -1,5 +1,6 @@
 package com.kevin.tech.bottomnavigationbarforandroid.fragment.subfragment;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Message;
@@ -11,18 +12,22 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+
+import android.widget.PopupMenu;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.kevin.tech.bottomnavigationbarforandroid.Constants;
 import com.kevin.tech.bottomnavigationbarforandroid.R;
+import com.kevin.tech.bottomnavigationbarforandroid.fragment.subfragment.Hq.Model.HqOption;
 import com.kevin.tech.bottomnavigationbarforandroid.fragment.subfragment.Hq.Model.Hqmodel;
 import com.kevin.tech.bottomnavigationbarforandroid.fragment.subfragment.Hq.Model.Httprequest;
 import com.kevin.tech.bottomnavigationbarforandroid.fragment.subfragment.Hq.Model.NSUserdefault;
@@ -52,6 +57,8 @@ public class HomeFragment extends Fragment implements AdapterView.OnItemClickLis
     private Handler handler;
     private int count = 0;
     private Mydaper mydaper;
+    private PopupMenu popupMenu;
+    private Menu menu;
 
     public static HomeFragment newInstance(String s){
         HomeFragment homeFragment = new HomeFragment();
@@ -65,11 +72,9 @@ public class HomeFragment extends Fragment implements AdapterView.OnItemClickLis
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.hq_list, container, false);
-
-
         handler = new Handler(this);
 
-      final   List<String> list = getSymbolList();
+        final   List<String> list = getSymbolList();
         Log.i("", "onCreateView: "+list);
         count = list.size();
 
@@ -104,6 +109,8 @@ public class HomeFragment extends Fragment implements AdapterView.OnItemClickLis
 
         Toast.makeText(getContext(),"点击："+position+"行"+listArray.get(position),Toast.LENGTH_LONG).show();
         Snackbar.make(getView(),"点击："+position+"行",Snackbar.LENGTH_SHORT ).show();
+        Intent intent = new Intent(getContext(), HqOption.class);
+        startActivity(intent);
 
     }
 
